@@ -27,17 +27,20 @@
   <body>
     <div class="wrapper">
       <header class="header"><h1>SunTrail</h1></header>
-
-      <div class="container">
+      <div class="middle_section box"> 
+        <p> What time will the sun rise and set at your location? </p> 
+        <p> The goal of this site is to assist users by providing them the sunrise and sunset times in their area</p>
+      </div>
+      <div class="container">   
         <div class="left_section box">
-          <h3>Your Location</h3>
+          <h2>Enter Your Location</h2>
+            
           <form>
             <div>
-              <label for="location">enter location:</label>
+              <label for="location">Your State:</label>
               <input type="text" name="location" id="location" />
             </div>
             <div class="button">
-              <!-- <button type="button" id="filter_button">Filter Data</button> -->
               <button type="button" id="generate">Generate Results</button>
             </div>
           </form>
@@ -47,6 +50,17 @@
           <h3>The Sunrise and Sunset in Your Location</h3>
           <div id="map" class="box"></div>
       </div>
+      
     </div>
+    <footer class="footer">
+      <a
+        href="http://github.com/rvanculin/INST377-Final"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Rachel's gitHub Page
+      </a>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
