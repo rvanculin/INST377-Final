@@ -4,6 +4,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rachel's Final For INST377</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+
   </head>
- </html>
+
+  <!-- Start Body -->
+  <body>
+    <div class="wrapper">
+      <header class="header"><h1>SunTrail</h1></header>
+
+      <div class="container">
+        <div class="left_section box">
+          <h3>Your Location</h3>
+          <form>
+            <div>
+              <label for="location">enter location:</label>
+              <input type="text" name="location" id="location" />
+            </div>
+            <div class="button">
+              <!-- <button type="button" id="filter_button">Filter Data</button> -->
+              <button type="button" id="generate">Generate Results</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="right_section box">
+          <h3>The Sunrise and Sunset in Your Location</h3>
+          <div id="map" class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>
