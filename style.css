@@ -124,7 +124,7 @@
   }
   
   .box {
-    background-color: rgba(254, 222, 134, 1);
+    background-color: rgba(254, 222, 134, 0.80);
     border: 2px solid;
     border-radius: 4px;
   
