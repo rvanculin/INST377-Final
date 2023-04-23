@@ -13,7 +13,7 @@
   */
   
   html {
-    background-color: rgb(242, 233, 228);
+    background-color: rgb(240, 247, 244);
     font-size: 16px;
     min-width: 300px;
     overflow-x: hidden;
@@ -35,7 +35,7 @@
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
     font-weight: 400;
     line-height: 1.5;
-    background-color: rgb(242, 233, 228);
+    background-color: rgb(240, 247, 244);
   }
   
   
@@ -103,7 +103,7 @@
     /* this will push other blocks out of the way */
   
     /* colors */
-    background-color: rgb(74, 78, 105);
+    background-color: rgb(50, 41, 47);
     color: #fafafa;
   
     /* shapes */
@@ -111,7 +111,7 @@
     font-size: 1.5rem;
     padding: 1.25rem;
     margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
-  
+    text-align: center;
   
     /* box-shadows are fancy */
     box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
@@ -119,12 +119,12 @@
 
   #map {
     width: 500px;
-    height: 380px;
+    height: 300px;
     margin-bottom: 1rem;
   }
   
   .box {
-    background-color: rgba(239, 239, 239, 0.40);
+    background-color: rgba(254, 222, 134, 1);
     border: 2px solid;
     border-radius: 4px;
   
@@ -135,7 +135,7 @@
   }
 
   .middle_section {
-    background-color: rgba(154, 140, 152);
+    background-color: rgba(124, 178, 182);
     /* flex: 0 2 auto; */
     margin: 1rem;
     padding: 1.5rem;
@@ -144,14 +144,14 @@
   }
   
   .left_section {
-    background-color: rgba(154, 140, 152);
+    background-color: rgba(124, 178, 182);
     flex: 0 1 auto;
     margin: 1rem;
     padding: 1.5rem;
   }
   
   .right_section {
-    background-color: rgba(201, 173, 167);
+    background-color: rgba(124, 178, 182);
     flex: 1 2 auto;
     margin: 1rem;
     align-items: center;
@@ -162,7 +162,7 @@
   .footer {
     flex-shrink: 0;
     padding: 1rem;
-    background-color: rgb(45, 45, 78);
+    background-color: rgb(50, 41, 47);
     font-size: 1.2rem;
     font-weight: 600;
   }
