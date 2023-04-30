@@ -27,7 +27,7 @@ async function mainEvent() {
     const long = document.getElementById("long").value;
 
     // Sunrise Sunset API URL
-    const APIurl = 'https://api.sunrise-sunset.org/json';
+    const APIurl = `https://api.sunrise-sunset.org/json?lat=${lati}&lng=${long}`;
 
     // Set up map view w/ leaflet
     const carto = mapView();
@@ -36,6 +36,7 @@ async function mainEvent() {
     
     loadDataButton.addEventListener("click", async (submitEvent) => {
         console.log("loading data");
+        console.log("load URL", APIurl)
         const results = await fetch(APIurl);
         const data = await results.json();
         console.table(data);
