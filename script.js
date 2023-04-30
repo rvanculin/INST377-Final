@@ -21,22 +21,32 @@ function mapView() {
 async function mainEvent() {
     const generateResultsButton = document.querySelector("#generate");
     const loadDataButton = document.querySelector("#data_load");
+    //const textEntry = document.querySelector("#latiText")
 
     // get user entered lat and long
-    const lati = document.getElementById("lati").value;
-    const long = document.getElementById("long").value;
+    const latiInput = document.getElementById("lati");
+    const longInput = document.getElementById("long");
 
-    // Sunrise Sunset API URL
-    const APIurl = `https://api.sunrise-sunset.org/json?lat=${lati}&lng=${long}`;
+    let lati = "";
+    let long = "";
 
     // Set up map view w/ leaflet
     const carto = mapView();
     
     const dataMain = [];
+
+    latiInput.addEventListener("input", (event) => {
+        lati = event.target.value;
+    })
+
+    longInput.addEventListener("input", (event) => {
+        long = event.target.value;
+    })
     
     loadDataButton.addEventListener("click", async (submitEvent) => {
         console.log("loading data");
-        console.log("load URL", APIurl)
+        console.log("load URL", lati, long)
+        const APIurl = `https://api.sunrise-sunset.org/json?lat=${lati}&lng=${long}`;
         const results = await fetch(APIurl);
         const data = await results.json();
         console.table(data);
@@ -48,10 +58,8 @@ async function mainEvent() {
     });
 
     generateResultsButton.addEventListener("click", (event) => {
-        console.log("generate new list");   
+        console.log("generate new list");    
         injectHTML(dataMain);
-        
-
       });
 }
 
