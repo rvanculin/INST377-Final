@@ -19,16 +19,9 @@ function mapView() {
     return carto;  
 }
 
-function showOnMap(latitude, longitude) {
-  // Create a LatLng object with the user-provided latitude and longitude
-  const latLng = L.latLng(latitude, longitude);
+function showOnMap(latitude, longitude, carto) {
+  const marker = L.marker([latitude, longitude]).addTo(carto);
 
-  // Create a marker with the LatLng object
-  const marker = L.marker(latLng).addTo(map);
-
-  // Create a popup with the coordinates
-  const popupContent = `Latitude: ${latitude}<br>Longitude: ${longitude}`;
-  marker.bindPopup(popupContent).openPopup();
 }
 
 function convertUTCToLocal(utcTime) {
@@ -106,7 +99,7 @@ async function mainEvent() {
     generateResultsButton.addEventListener("click", (event) => {
         console.log("generate new list");    
         injectHTML(dataMain);
-        showOnMap([lati, long]);
+        showOnMap(lati, long, carto);
       });
 
     clearDataButton.addEventListener("click", (event) => {
