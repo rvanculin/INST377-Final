@@ -7,11 +7,6 @@
     box-sizing: border-box;
   }
   
-  /* 
-    These rules apply to actual HTML elements with no labelling!
-    So: they style the tags directly
-  */
-  
   html {
     background-color: rgb(240, 247, 244);
     font-size: 16px;
@@ -60,14 +55,6 @@
     accent-color: hsla(120, 100%, 50%, 0.482);
   }
   
-  /*
-    - These styles use 'class names'
-    - You can apply them by using the 'class' attribute on your HTML
-    - like this: <div class="wrapper">
-    - note that the period vanishes there!
-  */
-  
-  
   .wrapper {
     min-height: 100vh;
     display: flex;
@@ -90,13 +77,6 @@
     padding-right: 1rem;
     padding-bottom: 1.5rem;
   }
-  
-  
-  /*
-    This rule implies that the H1 tag lives within another HTML tag
-    It "inherits" some rules from the above
-    Those rules won't apply to an h1 that's outside a block with the class of 'header'
-  */
   
   .header h1 {
     display: block;
@@ -233,21 +213,6 @@
     display: block;
   }
   
-  .carousel_item img {
-    /* 
-      Setting width, rather than max-width or min-width,
-      means annoying pop-ins won't happen
-      but it also means you need to format your images to be compatible
-      or they will stretch weird
-  
-      - try a tall one and see what happens
-      - change the height on a fixed image size and see what happens
-      - now make sure that images are _always_ square
-      - ... there's a reason crop tools are popular in image editors
-     */
-    width: 150px; 
-  }
-  
   .prev,
   .next {
     border: none;
@@ -262,13 +227,12 @@
   }
   
   form input {
-      /* This is a hack to make sure our boxes line up with one another nicely */
       width: 100%;
       width: -moz-available;          /* WebKit-based browsers will ignore this. */
       width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
       width: fill-available;
   
-      /* here we are setting white space correctly */
+      /* whitespace */
       margin-bottom: 1rem;
       height: 2rem;
       border-radius: 4px;
@@ -285,7 +249,7 @@
       margin-bottom: 0.5rem;
     }
   
-  /* How To Write A Media Query For Small Screens */
+  /* Media Query For Small Screens */
   
   @media only screen and (max-width: 736px){
       /* Rules in here will only apply when a screen is the correct size */
