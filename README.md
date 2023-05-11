@@ -12,7 +12,3 @@ The api used in this project is the sunrise-sunset.org API which returns sunrise
 ## Visualizations & JS Libraries
 
 SunTrail uses the Leaflet javascript library to display a map with a pin displaying the location of the users given coordinates. 
-
-## CSS Frameworks and Versions
-
-
